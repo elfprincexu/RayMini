@@ -1,0 +1,108 @@
+################################################################################
+#                                                                              #
+#   Raymini: A minimal ray tracer implementation                               #
+#   == INFSI350 / 2012-2013_S02P03 ==                                          #
+#                                                                              #
+#   Professor:  Tamy BOUBEKEUR                                                 #
+#   Students:   Junxian XU                                                     #
+#               Maxim KARPUSHIN                                                #
+#               Tiago CHEDRAOUI SILVA                                          #
+#               Vinicius DIAS DE OLIVEIRA GARDELLI                             #
+#                                                                              #
+################################################################################
+
+Table of contents:
+    1_  Overview
+        1.1_  Features
+    2_  Installation
+        2.1_  Prerequisites
+        2.2_  Compiling raymini
+            2.2.1_  On Linux
+            2.2.2_  On Windows
+        2.3_  Running raymini
+        2.4_  Generating raymini's documentation
+
+
+
+================================================================================
+= 1_ Overview
+================================================================================
+    RayMini is a multi-platform minimal raytracer implemented in C++/OpenGL/Qt.
+    This software package is meant to be distributed to Telecom ParisTech
+    students only.
+    
+================================================================================
+== 1.1_ Features
+================================================================================
+    The main features implemented in this ray tracing engine are:
+    
+    1)  Adjustable-depth inter-reflections
+    2)  Interactive mode
+    3)  Ambient occlusion
+    4)  Shadow generation
+    5)  Possibility to choose between hard/soft shadows and adjustable extended
+        light source parameters.
+    6)  Focus effect filtering
+    7)  Multiple example scenes to choose from
+    8)  Path tracing rendering with adjustable parameters
+    9)  Possibility to use texture-bump maps
+    10) Accelerated ray-geometry intersection check by a KD-Tree
+
+
+    
+================================================================================
+= 2_ Installation
+================================================================================
+
+================================================================================
+== 2.1_ Pre-requisites
+================================================================================
+    In order to compile and run raymini, you'll need to install the following 
+    tools:
+        
+        * gcc >v4.3 (MinGW if you're on windows)
+        * OpenGL libraries
+        * QT >v4.4
+        * libQGLViewer
+        * GLEW
+        * Doxygen
+
+================================================================================
+== 2.2_ Compiling and running raymini
+================================================================================
+
+================================================================================
+=== 2.2.1_ On Linux
+================================================================================
+    Compiling raymini on linux is straightforward:
+
+    1_ Generate the makefile via the command:
+        qmake-qt4 raymini.pro
+    2_ Launch the building process via the command:
+        make
+    3_ Launch raymini via the command:
+        ./raymini
+
+================================================================================
+=== 2.2.2_ On Windows 
+================================================================================
+    Compiling and running raymini on windows should be made using the QtCreator
+    tool. To open the project with QtCreator, double-click the raymini.pro file.
+    If that doesn't work, right-click the raymini.pro file, click on "open with"
+    and choose QtCreator on the pop-up window that will appear.
+
+
+================================================================================
+== 2.3_ Generating and viewing raymini's documentation 
+================================================================================
+    The project's documentation is written in Doxygen's syntax. In order to
+    generate it, one should run the following command in the root folder:
+
+        doxygen
+    
+    To see the HTML documentation, simply navigate to the doc/html folder.
+    If you want a PDF documentation, navigate to the doc/latex folder and
+    run:
+        
+        1. make
+        2. evince refman.pdf
