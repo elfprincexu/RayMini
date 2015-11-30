@@ -1,0 +1,12 @@
+
+#ignore all .o and .a files
+*.[oa]
+
+#ignore .tmp, debug, release and Presentationfolder
+.tmp
+Presentation
+release
+debug
+
+#ignore .gitignore file
+#.gitignore
